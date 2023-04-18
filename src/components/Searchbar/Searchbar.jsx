@@ -7,7 +7,7 @@ import {
   Label,
 } from './Searchbar.styled';
 
-import { CiSearch } from 'react-icons/ci';
+import { FiSearch } from 'react-icons/fi';
 
 class Searchbar extends Component {
   state = {
@@ -29,7 +29,7 @@ class Searchbar extends Component {
         <SearchForm>
           <Button type="submit" onSubmit={this.handleSubmit}>
             <Label>
-              <CiSearch value={{ style: { width: 50, height: 50 } }} />
+              <FiSearch value={{ style: { width: 50, height: 50 } }} />
             </Label>
           </Button>
 
