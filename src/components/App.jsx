@@ -2,9 +2,9 @@ import { Component } from 'react';
 import { ThreeDots } from 'react-loader-spinner';
 
 import Searchbar from './Searchbar/Searchbar';
-import getImages from '../services/pixebayApi';
+import getImages from 'services/pixebayApi';
 import ImageGallery from './ImageGallery/ImageGallery';
-// import { Container, ErrorMessage } from './App.styled';
+import { Container, ErrorMessage } from './App.styled';
 import Button from './Button/Button';
 import Modal from './Modal/Modal';
 
@@ -100,7 +100,7 @@ export class App extends Component {
       this.state;
 
     return (
-      <div>
+      <Container>
         <Searchbar onSubmit={this.formSubmit} />
         {loading && (
           <ThreeDots
@@ -127,9 +127,9 @@ export class App extends Component {
         )}
 
         {totalResults === 0 && search && !loading && (
-          <p>Ooops, something went wrong :(</p>
+          <ErrorMessage>Ooops, something went wrong :(</ErrorMessage>
         )}
-      </div>
+      </Container>
     );
   }
 }

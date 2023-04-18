@@ -26,8 +26,8 @@ class Searchbar extends Component {
   render() {
     return (
       <SearchHeader>
-        <SearchForm>
-          <Button type="submit" onSubmit={this.handleSubmit}>
+        <SearchForm onSubmit={this.handleSubmit}>
+          <Button type="submit">
             <Label>
               <FiSearch value={{ style: { width: 50, height: 50 } }} />
             </Label>
@@ -37,7 +37,7 @@ class Searchbar extends Component {
             type="text"
             autocomplete="off"
             value={this.state.querySearch}
-            autofocus
+            autoFocus
             placeholder="Search images and photos"
             onChange={this.handleChange}
           />
