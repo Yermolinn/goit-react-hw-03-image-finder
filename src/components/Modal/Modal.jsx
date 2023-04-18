@@ -1,5 +1,5 @@
 import { Component } from 'react';
-import { Overlay, ModalWindow } from './Modal.styled';
+import { ModalWindow, Overlay } from './Modal.styled';
 
 class Modal extends Component {
   componentDidMount = () => {
@@ -28,8 +28,8 @@ class Modal extends Component {
     const { urlItem } = this.props;
     return (
       <Overlay>
-        <ModalWindow class="modal">
-          <img src={this.urlIem} alt="" />
+        <ModalWindow>
+          <img src={urlItem} alt="" />
         </ModalWindow>
       </Overlay>
     );
